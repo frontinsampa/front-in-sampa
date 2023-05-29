@@ -1,0 +1,251 @@
+---
+const schedule = [
+  {
+    time: '09:00',
+    title: 'Abertura oficial',
+    disclaimer: 'Boas vindas e um pouco como será a dinâmica do dia' 
+  },
+  {
+    time: '09:15',
+    title: 'Primeira palestra',
+  },
+  {
+    time: '10:00',
+    title: 'Break - Networking',
+  },
+  {
+    time: '10:15',
+    title: 'Segunda palestra',
+  },
+  {
+    time: '11:00',
+    title: 'Break - Networking',
+  },
+  {
+    time: '11:15',
+    title: 'Terceira palestra',
+  },
+  {
+    time: '12:00',
+    title: 'Break - Networking',
+  },
+  {
+    time: '12:15',
+    title: 'Quarta palestra',
+  },
+  {
+    time: '13:00',
+    title: 'Intervalo para o almoço',
+  },
+  {
+    time: '14:15',
+    title: 'Quinta palestra',
+  },
+  {
+    time: '15:00',
+    title: 'Break - Networking',
+  },
+  {
+    time: '15:15',
+    title: 'Sexta palestra',
+  },
+  {
+    time: '16:00',
+    title: 'Break - Networking',
+  },
+  {
+    time: '16:15',
+    title: 'Sétima palestra',
+  },
+  {
+    time: '17:00',
+    title: 'Encerramento',
+  },
+  {
+    time: '18:00',
+    title: 'Code In The Dark Brasil',
+  }
+
+];
+
+---
+<section class="schedule">
+  <h2 class="schedule-title">
+    Programação
+  </h2>
+  <div class="schedule-main">
+    <ul class="schedule-list">
+
+      {schedule.map(({ time, title, disclaimer }) => (
+        <li class="schedule-item">
+          <div class="schedule-column-time">
+            <span class="schedule-item-time">{time}</span>
+          </div>
+          <div class="schedule-column-content">
+            <h3 class="schedule-item-title">{title}</h3>
+            {disclaimer && <p class="schedule-item-disclaimer">{disclaimer}</p>}
+          </div>
+        </li>
+      ))}
+
+    </ul>
+
+    <p class="schedule-disclaimer">
+      * Os horários e slots podem sofrer alterações sem aviso prévio até o dia do evento.
+    </p>
+  </div>
+</section>
+
+<style lang="scss">
+  .schedule {
+    position: relative;
+    background-color: var(--color-primary);
+    padding: 8rem 0 10rem;
+
+    @media (max-width: 800px) {
+      padding: 6rem 0 6rem;
+    }
+  }
+
+  .schedule-title {
+    color: var(--color-secondary);
+    font-size: 4rem;
+    text-align: center;
+    background: var(--color-accent);
+    padding: 1rem 0;
+    margin-top: 5rem;
+  }
+
+  .schedule-main {
+    max-width: var(--wrapper-medium);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .schedule-disclaimer {
+    padding-top: 5rem;
+    color: #999;
+    text-align: center;
+
+    @media (max-width: 800px) {
+      text-align: left;
+      padding-left: 3rem;
+      padding-top: 2rem;
+    }
+  }
+
+  .schedule-list {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    color: var(--color-secondary);
+    padding-top: 4em;
+    max-width: 70rem;
+
+    @media (max-width: 800px) {
+      padding: 4rem 3rem 0 3rem;
+    }
+  }
+
+  .schedule-item {
+    display: flex;
+    margin: 3rem 0;
+  }
+
+  .schedule-column-time {
+    flex-basis: 25rem;
+
+    @media (max-width: 600px) {
+      flex-basis: 11rem;
+    }
+  }
+
+  .schedule-column-content {
+    flex: 1;
+    padding-top: .2rem;
+
+    @media (max-width: 600px) {
+      padding-top: 0;
+    }
+  }
+
+  .schedule-item-time {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: bold;
+    border: 1px solid var(--color-secondary);
+    padding: .6rem 2rem;
+
+    @media (max-width: 600px) {
+      font-size: 1.6rem;
+      padding: .6rem 1.4rem;
+    }
+  }
+  
+  .schedule-item-time:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 10px;
+    border-top: 1px solid var(--color-secondary);
+    left: 100%;
+    top: 50%;
+
+    @media (max-width: 600px) {
+      width: 25%;
+    }
+  }
+
+  .schedule-item-title {
+    font-size: 3rem;
+
+    @media (max-width: 600px) {
+      font-size: 2.4rem;
+      margin-top: -.3rem;
+    }
+  }
+
+  .schedule-item-talk {
+    color: var(--color-secondary);
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-indent: 1px;
+    margin: -1rem 0 4rem 0;
+    line-height: 1.6;
+
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .schedule-item-disclaimer {
+    margin: -1rem 0 0;
+    padding: 0;
+    font-size: 1.3rem;
+    color: #666;
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .schedule-item__talk {
+    padding: 2rem 0;
+
+    @media (max-width: 600px) {
+      padding: 1rem 0;
+    }
+  }
+
+  .schedule-item__talk .schedule-item-time {
+    display: none;
+  }
+
+  .schedule-item__talk .schedule-item-title {
+    color: var(--color-accent);
+  }
+</style>

@@ -1,0 +1,171 @@
+<section class="location">
+  <div class="location-main">
+    <div class="location-content">
+      <div class="location-content__inner">
+        <span class="location-pre-title">De "front" para a Avenida Paulista</span>
+        <h2 class="location-title">Teatro Gazeta</h2>
+        <address class="location-address">
+          Av. Paulista, 900<br />
+          Bairro Bela Vista<br />
+          São Paulo - SP - Brasil
+        </address>
+        <div class="button-wrapper">
+          <a href="https://goo.gl/maps/DgFfpkRnizYQNBBo9" class="button" target="_blank">
+            Como chegar
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="location-photo">
+
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .location {
+    position: relative;
+    background-color: var(--color-secondary);
+    height: 55rem;
+
+    @media (max-width: 600px) {
+      padding: 12rem 0;
+      height: auto;
+    }
+  }
+
+  .location-main {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  .location-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: 1000px) {
+      padding-left: 3rem;
+    }
+  }
+
+  .location-content__inner {
+    flex-basis: 56.8rem;
+  }
+
+  .location-photo {
+    position: relative;
+    flex: 1;
+    background-image: url('../assets/img/teatro-gazeta.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .location-pre-title {
+    color: var(--color-primary);
+    background-color: var(--color-accent-2);
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    padding: .4em .6em;
+
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .location-disclaimer {
+    position: relative;
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    max-width: 80%;
+    line-height: 1.5;
+    background-color: rgba(189, 237, 255, .2);
+    padding: 1.2rem 1rem 1.2rem 5rem;
+    margin-bottom: .7rem;
+
+    @media (max-width: 800px) {
+      max-width: 93%;
+    }
+
+    &:before {
+      --size: 2rem;
+      --color: #21aade;
+      content: 'i';
+      position: absolute;
+      top: 1.3rem;
+      left: 1.5rem;
+      width: var(--size);
+      height: var(--size);
+      color: var(--color);
+      font-size: 1.2rem;
+      text-align: center;
+      border: 1px solid var(--color);
+      border-radius: 50%;
+      font-weight: 900;
+      font-family: var(--font-default);
+    }
+  }
+
+  .location-title {
+    font-size: 4rem;
+    margin-bottom: .4em;
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  .location-address {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.4em;
+    font-style: normal;
+    letter-spacing: -0.02em;
+    padding-left: 2px;
+  }
+
+  .button-wrapper {
+    padding-top: 2rem;
+  }
+
+  .button-wrapper .button {
+    font-size: 1.6rem;
+    background-color: var(--color-secondary);
+    border: 2px solid var(--color-primary);
+    padding: .5em 1em .5em 2.6em;
+
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .button-wrapper .button:before {
+    content: '';
+    width: 2rem;
+    height: 2.8rem;
+    position: absolute;
+    top: .4em;
+    left: .8em;
+    background: url('/assets/img/pin.svg') no-repeat center;
+    background-size: 70% auto;
+
+    @media (max-width: 600px) {
+      top: .3em;
+    }
+  }
+</style>

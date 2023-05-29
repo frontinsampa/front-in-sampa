@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Header from '../components/header.astro';
+import Features from '../components/features.astro';
+import Speakers from '../components/speakers.astro';
+import Staging from '../components/staging.astro';
+import Location from '../components/location.astro';
+import Tickets from '../components/tickets.astro';
+import Schedule from '../components/schedule.astro';
+import Sponsors from '../components/sponsors.astro';
+import Footer from '../components/footer.astro';
+
+const title = 'FRONTIN Sampa 2023 + Code In The Dark Brasil';
+const description = 'O tradicional e maior evento de Front-End do Brasil, FRONTIN Sampam chega a sua 12ª edição e não estará sozinho: Temos Code In The Dark Brasil.';
+const permalink = Astro.site;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink}>
+  <Header />
+  <Features />
+  <Speakers />
+  <Location />
+  <Schedule />
+  <Tickets />
+  <Staging />
+  <Sponsors />
+  <Footer />
+</BaseLayout>

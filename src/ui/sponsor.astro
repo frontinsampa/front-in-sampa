@@ -1,0 +1,57 @@
+---
+const { logo, company, url, kind } = Astro.props;
+---
+
+<a class={`support-item support-item--${kind}`} href={url} target="_blank">
+  <img class="support-logo" src={`/sponsors/${logo}`} alt={company} />
+</a>
+
+<style lang="scss">
+  .support-item {
+    text-decoration: none;
+    border: 0;
+    display: flex;
+    width: 90%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    padding: 2rem 0;
+    margin: 0 auto;
+  }
+
+  .support-logo {
+    max-height: 10rem;
+  }
+
+  .support-item--sponsor {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  .support-item--support {
+    padding: .6rem 0;
+    width: 85%;
+  }
+
+  .support-item--support .support-logo {
+    max-height: 4.5rem;
+    max-width: 95%;
+
+    @media (max-width: 600px) {
+      max-height: 3.5rem;
+    }
+  }
+
+  .support-item--main-sponsor {
+    max-height: 15rem;
+    max-width: 100%;
+    padding: 1rem 0 0;
+    width: 100%;
+    
+    .support-logo {
+      max-height: 14rem;
+    }
+  }
+</style>

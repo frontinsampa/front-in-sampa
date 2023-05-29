@@ -1,0 +1,260 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Black.woff2') format('woff2'),
+       url('/fonts/Roboto-Black.woff') format('woff'),
+       url('/fonts/Roboto-Black.ttf') format('ttf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Bold.woff2') format('woff2'),
+       url('/fonts/Roboto-Bold.woff') format('woff'),
+       url('/fonts/Roboto-Bold.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.woff2') format('woff2'),
+       url('/fonts/Roboto-Regular.woff') format('woff'),
+       url('/fonts/Roboto-Regular.ttf') format('ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans';
+  src: url('/fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
+       url('/fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans';
+  src: url('/fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+       url('/fonts/PlusJakartaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans';
+  src: url('/fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+       url('/fonts/PlusJakartaSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-default: 'Roboto', monospace;
+  --font-title: 'PlusJakartaSans', Arial, sans-serif;
+  
+  /* ==================================================== */
+  /*
+    New palette
+    --red: #FF685C;
+    --light-red: #FFE8E6;
+    --gray: #404040;
+    --black: #202020;
+    --white: #FFFFFF;
+    --black-transparent: #20202080;
+    --white-transparent: #ffffff80;
+  
+    Old palette
+    --color-primary: #0e0e10;
+    --color-secondary: #fff;
+    --color-accent: #93ffb7;
+    --color-accent-2: #e6ffef;
+    --color-text: #141414;
+    --color-border: #F9F9F9;
+  */
+  /* ==================================================== */
+  --color-primary: #202020;
+  --color-secondary: #FFFFFF;
+  --color-accent-old: #FF685C;
+  --color-accent: #fa4541;
+  --color-accent-2: #FFE8E6;
+  --color-text: #202020;
+  --color-border: #ffffff80;
+  --color-neon-green: #2efc98;
+  
+  /* ==================================================== */
+
+  --wrapper: 1400px;
+  --wrapper-medium: 1150px;
+  --wrapper-small: 1000px;
+
+  --animation-wave: 40s;
+}
+
+::-moz-selection {
+  background: var(--color-accent-2);
+  color: var(--color-primary);
+}
+
+::selection {
+  background: var(--color-accent-2);
+  color: var(--color-primary);
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-default);
+  font-size: 10px;
+  line-height: 1.6;
+  color: var(--color-primary);
+  cursor: default;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0 0 .5em 0;
+  font-family: var(--font-title);
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0 0 .4em 0;
+}
+
+p, ul, ol {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin: 1.6em 0;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+ol, ul {
+  padding-left: 4rem;
+  -webkit-padding-start: 5%;
+  -webkit-padding-end: 5%;
+}
+
+li {
+  margin: 1rem 0;
+}
+
+li p {
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+}
+
+a {
+  color: var(--color-primary);
+  /* font-weight: bold; */
+  text-decoration: none;
+}
+
+.link {
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;
+  padding: .3em .1em 0 .1em;
+}
+
+.link-social {
+  position: relative;
+  /* padding-left: 2.4rem; */
+}
+
+/* .link-social:before {
+  --size: 1.4rem;
+  content: '';
+  position: absolute;
+  display: block;
+  top: .5em;
+  left: .2em;
+  width: var(--size);
+  height: var(--size);
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.link-social--twitter:before {
+  background-image: url('/assets/social/twitter.png');
+}
+
+.link-social--instagram:before {
+  background-image: url('/assets/social/instagram.png');
+}
+
+.link-social--github:before {
+  background-image: url('/assets/social/github.png');
+}
+
+.link-social--whatsapp:before {
+  background-image: url('/assets/social/whatsapp.png');
+} */
+
+p strong {
+  font-weight: 900;
+}
+
+img {
+  max-width: 100%;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  padding: .5em 1em;
+  background: var(--color-accent);
+  text-transform: uppercase;
+  box-shadow: 3px 3px var(--color-neon-green);
+  border: 2px solid var(--color-primary);
+  transition: box-shadow .2s ease;
+}
+
+.button:hover {
+  box-shadow: 5px 5px;
+}
+
+.button-alt {
+  font-size: 1.6rem;
+  background-color: var(--color-secondary);
+  border: 2px solid var(--color-primary);
+  padding: .5em 1em;
+}
+
+.button-inverse {
+  color: var(--color-secondary);
+}
+
+.button-off {
+  background-color: #ddd;
+  cursor: default;
+  pointer-events: none;
+  opacity: .6;
+}

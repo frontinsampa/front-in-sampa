@@ -1,0 +1,288 @@
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-column">
+      <a href="#coc" id="show-coc" class="link">
+        Código de Conduta
+      </a>
+    </div>
+    <div class="footer-column footer-column--contact">
+      <a href="mailto:contato@frontinsampa.com.br" class="link">
+        contato@frontinsampa.com.br
+      </a>
+    </div>
+    <div class="footer-column">
+      <ul class="footer-social">
+        <li>
+          <a href="https://twitter.com/frontinsp" class="link link-social">
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/frontinsampa" class="link link-social">
+            Instagram
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCwoGd_KU0OxiVT5r-rPrzWA" class="link link-social">
+            YouTube
+          </a>
+        </li>
+        <li>
+          <a href="https://frontinsampa.com.br/" class="link link-social">
+            Frontin
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+ 
+</footer>
+
+<div class="coc" id="coc">
+  <span class="coc-close" id="close-coc">×</span>
+  <div class="coc-content">
+    <div class="coc-content-inner">
+      <h1>Código de Conduta</h1>
+      <p>Participantes, palestrantes, representantes de empresas e pessoas voluntárias da conferência precisam concordar com este código de conduta. A equipe organizadora vai reforçar que este código seja seguido durante todo o evento. Esperamos a cooperação de todas as partes para ajudar a garantir um ambiente seguro para qualquer pessoa.</p>
+      
+      <h2>Versão rápida</h2>
+      <p>Nossa conferência é dedicada a fornecer uma experiência livre de assédio para todas as pessoas, independentemente do sexo, identidade de gênero e expressão, idade, orientação sexual, deficiência, aparência física, tamanho corporal, cor de pele, etnia, religião (ou falta dela) ou escolhas de tecnologias. Não toleramos o assédio a participantes da conferência, sob qualquer forma. Linguagem e imagens sexuais não são apropriadas em nenhum local, incluindo palestras, workshops, festas, Twitter e outras mídias on-line. Violações destas regras poderão causar expulsão da conferência, sem restituição, a critério da equipe organizadora.</p>
+      
+      <h2>Versão mais longa</h2>
+      <p>Constituem assédio comentários verbais ofensivos relacionados a gênero, identidade de gênero e expressão, idade, orientação sexual, deficiência, aparência física, tamanho corporal, cor de pele, etnia, religião, escolhas de tecnologias, imagens sexuais em espaços públicos, intimidação deliberada, perseguição, stalking, fotografias ou filmagens constrangedoras, interrupção contínua das apresentações ou outros eventos, contato físico inadequado e atenção sexual indesejada.</p><p>Participantes que receberem uma solicitação para interromper qualquer comportamento de assédio devem fazer isso imediatamente.</p><p>As políticas antiassédio também se aplicam a representantes de empresas patrocinadoras. Em particular, não devem usar imagens, atividades ou outro material de cunho sexual. As equipes de estandes e tendas (incluindo pessoas voluntárias) não devem utilizar roupas, uniformes ou trajes sexualizados ou criar um ambiente sexualizado de quaisquer formas.</p><p>Se alguém se envolver em comportamento de assédio, a equipe organizadora poderá tomar todas as medidas que considerar adequadas, incluindo avisar a pessoa ofensora ou expulsá-la da conferência sem nenhum reembolso.</p><p>Caso sofra assédio, perceba que alguém esteja sofrendo assédio ou tenha alguma dúvida, entre em contato com alguém da organização imediatamente. As pessoas da equipe da conferência podem ser identificadas, pois estarão vestindo camisetas marcadas.</p><p>A organização estará disposta a auxiliar participantes a entrar em contato com a segurança do hotel ou local, bem como aplicar a legislação pertinente, fornecer escoltas ou ajudar pessoas que sofrerem assédio para que se sintam seguras durante a conferência. Valorizamos sua participação.</p><p>Esperamos que todas as pessoas participantes sigam estas regras em salas de apresentação e workshops da conferência, além de eventos sociais relacionados.</p>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .footer {
+    position: relative;
+    background-color: var(--color-border);
+    padding: 4rem 0 5rem;
+  }
+
+  .footer-main {
+    max-width: var(--wrapper-medium);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 900px) {
+      display: block;
+    }
+  }
+
+  .footer-column {
+    flex: 1;
+
+    @media (max-width: 900px) {
+      text-align: center;
+      padding: 1rem;
+    }
+  }
+
+  .footer-column--contact {
+    text-align: center;
+  }
+
+  .footer-column a {
+    font-size: 1.4rem;
+  }
+
+  .footer-social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
+  }
+
+  .footer-social li {
+    margin: 0;
+  }
+
+  .coc {
+    opacity: 0;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+  }
+
+  .coc-close {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 6rem;
+    color: var(--color-secondary);
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .coc-content {
+    position: relative;
+    margin: 0 auto;
+    max-height: 100vh;
+    overflow: auto;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    padding-left: -webkit-calc(50% - 350px);
+    padding-left: calc(50% - 350px);
+    padding-right: calc(50% - 350px);
+    padding-top: 4em;
+    padding-bottom: 2em;
+  }
+
+  .coc-content-inner {
+    padding: 0 2em;
+
+    h1 {
+      @media (max-width: 600px) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .coc-content-inner h2 {
+    font-size: 2.8rem;
+
+    @media (max-width: 600px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  .coc-content-inner p {
+    color: var(--color-secondary);
+  }
+
+  .coc.show {
+    opacity: 1;
+    z-index: 100;
+    animation: slide-up .3s ease-out forwards;
+  }
+  
+  .coc.show.hide {
+    animation: slide-down 0.2s ease-in forwards;
+  }
+
+  .footer-editions {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .select-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    min-width: 10rem;
+    max-width: 22rem;
+    background-color: var(--color-secondary);
+  }
+
+  .select-wrapper:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1.4rem;
+    height: 1.4rem;
+    top: 50%;
+    margin-top: -.7rem;
+    right: 2rem;
+    background: url('/assets/img/arrow-select.svg') center no-repeat;
+    z-index: 1;
+  }
+
+  .select {
+    position: relative;
+    width: 100%;
+    padding: .8em 1.2em;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    line-height: 1.5;
+    box-shadow: 0 0 2rem #eee;
+    z-index: 2;
+
+    @media (max-width: 600px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .select select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    text-transform: uppercase;
+    line-height: inherit;
+    outline: none;
+    font-weight: bold;
+  }
+
+  .select select::-ms-expand {
+    display: none;
+  }
+
+  @keyframes slide-up {
+    100% {
+      top: 0;
+    }
+  }
+
+  @keyframes slide-down {
+    0% {
+      top: 0;
+    }
+
+    100% {
+      top: 100%;
+    }
+  }
+</style>
+
+<script>
+  const showCOC = document.getElementById('show-coc');
+  const closeCOC = document.getElementById('close-coc');
+  const COC = document.getElementById('coc');
+  const editions = document.getElementById('editions');
+
+  if (showCOC) {
+    showCOC.addEventListener('click', e => {
+      e.preventDefault();
+      COC.classList.add('show');
+    });
+  }
+
+  closeCOC.addEventListener('click', e => {
+    e.preventDefault();
+    COC.classList.add('hide');
+
+    setTimeout(() => {
+      COC.classList.remove('show', 'hide')
+    }, 1000);
+  });
+
+  editions.addEventListener('change', e => {
+    const editionURL = e.target.value;
+
+    if (editionURL !== 'none') {
+      window.open(editionURL, '_blank');
+    }
+  });
+</script>

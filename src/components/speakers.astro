@@ -1,0 +1,156 @@
+---
+import Speaker from "../ui/speaker.astro";
+
+const speakers = [
+  {
+    pic: 'lucas-santos.png',
+    name: 'Lucas Santos',
+    bio: 'Software engineer @ Klarna 🇸🇪',
+    talk: 'Em Breve',
+    twitter: '_StaticVoid',
+    linkedin: 'https://www.linkedin.com/in/lsantosdev',
+  },
+  {
+    pic: 'maria-clara.jpeg',
+    name: 'Maria Clara',
+    bio: 'Software Engineer @ Brex',
+    talk: 'Máquinas de Estado Finito para Interfaces Infinitamente Melhores',
+    twitter: 'olarclara',
+    linkedin: 'https://www.linkedin.com/in/mariaclarasantana',
+  },
+  {
+    pic: 'noname.jpg',
+    name: 'Palestrante',
+    talk: 'Em Breve'
+  },
+  {
+    pic: 'noname.jpg',
+    name: 'Palestrante',
+    talk: 'Em Breve'
+  },
+  {
+    pic: 'noname.jpg',
+    name: 'Palestrante',
+    talk: 'Em Breve'
+  },
+  {
+    pic: 'noname.jpg',
+    name: 'Palestrante',
+    talk: 'Em Breve'
+  },
+  {
+    pic: 'noname.jpg',
+    name: 'Palestrante',
+    talk: 'Em Breve'
+  }
+];
+
+const specialClass = [0, 3, 4, 7];
+---
+
+<section class="speakers">
+
+ <h2 class="speakers-title">Production.Frontinsampa</h2>
+
+  <div class="speakers-main">
+    <div class="speakers-list">
+      {speakers.map(({ pic, name, bio, talk, twitter, linkedin }, index) => (
+        <div class="speakers-item">
+          <Speaker
+            pic={pic}
+            name={name}
+            bio={bio}
+            talk={talk}
+            twitter={twitter}
+            linkedin={linkedin}
+            specialClass={specialClass.includes(index) && 'alt'}
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+<style lang="scss">
+  .speakers {
+    position: relative;
+    background-color: var(--color-accent);
+    padding: 13rem 0 10rem;
+
+    @media (max-width: 600px) {
+      padding: 9rem 0 2rem;
+    }
+  }
+
+  .speakers-main {
+    max-width: var(--wrapper-medium);
+    width: 100%;
+    margin: 0 auto;
+    
+
+     @media (max-width: 600px) {
+      overflow: hidden;
+    }
+  }
+
+  .speakers-title {
+    font-size: 4rem;
+    text-align: center;
+    background-color: var(--color-neon-green);
+    padding: 1rem 0;
+    margin-bottom: 6rem;
+
+
+    @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
+
+  .speakers-list {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
+
+  .speakers-item {
+    flex-basis: 48%;
+    margin-bottom: 3rem;
+    transform: rotate(354deg);
+
+    &:nth-child(2) {
+     transform: rotate(4deg);
+   }
+   &:nth-child(3) {
+     transform: rotate(344deg);
+   }
+   &:nth-child(4) {
+     transform: rotate(10deg);
+   }
+   &:nth-child(5) {
+     transform: rotate(0deg);
+   }
+   &:nth-child(6) {
+     transform: rotate(342deg);
+   }
+   &:nth-child(6) {
+     transform: rotate(351deg);
+   }
+
+
+  }
+
+  
+
+
+
+
+
+</style>

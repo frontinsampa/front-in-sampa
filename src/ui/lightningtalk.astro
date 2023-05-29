@@ -1,0 +1,173 @@
+---
+const { pic, name, bio, talk, twitter, linkedin, specialClass, time } = Astro.props;
+---
+
+<div class={`lightningtalk-item lightningtalk-item--${specialClass}`}>
+  <div class="lightningtalk-content">
+    <div class="lightningtalk-photo">
+      <img src={`/speakers/${pic}`} alt={name} />
+    </div>
+    <div class="lightningtalk-info">
+      <div class="lightningtalk-info-inner">
+        <h3 class="lightningtalk-title">{name}</h3>
+        <div>
+          <p class="lightningtalk-bio">{bio}</p>
+        </div>
+        {talk && <p class="lightningtalk-talk">{talk}</p>}
+        {(twitter || linkedin) &&
+          <div class="lightningtalk-social">
+            {twitter && <a href={`https://twitter.com/${twitter}`} class="lightningtalk-social-link lightningtalk-social-link--twitter" target="_blank">Twitter</a>}
+            {linkedin && <a href={linkedin} class="lightningtalk-social-link lightningtalk-social-link--linkedin" target="_blank">Linkedin</a>}
+          </div>}
+      </div>
+    </div>
+  </div>
+{time &&
+  <div class="lightningtalk-time">
+    {time}
+  </div>
+ }
+
+</div>
+
+<style lang="scss">
+  .lightningtalk-item {
+    position: relative;
+  }
+
+  .lightningtalk-time {
+    display: inline-block;
+    padding: .2em .3em;
+    font-family: var(--font-title);
+    font-size:1rem;
+    background-color: var(--color-accent-2);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+  }
+
+  .lightningtalk-item:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    @media (max-width: 700px) {
+      width: 98%;
+    }
+  }
+
+  .lightningtalk-item--alt:before {
+    border-radius: 70% 30% 25% 75% / 50% 57% 43% 50%;
+  }
+
+  .lightningtalk-content {
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-secondary);
+    box-shadow: 6px 6px var(--color-neon-green);
+
+  }
+
+
+  .lightningtalk-photo {
+    flex-basis: 30%;
+
+    @media (max-width: 600px) {
+      flex-basis: 27%;
+    }
+  }
+
+  .lightningtalk-photo img {
+    max-width: 100%;
+  }
+
+  .lightningtalk-info {
+    flex: 1;
+    padding-left: 2.4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .lightningtalk-title {
+    display: inline-block;
+    padding: .2em .3em;
+    font-family: var(--font-title);
+    font-size: 2rem;
+    margin-bottom: .2em;
+    background-color: var(--color-neon-green);
+    margin-left: -.5rem;
+
+    @media (max-width: 600px) {
+      font-size: 2.2rem;
+    }
+  }
+
+  .lightningtalk-bio {
+    display: inline-block;
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin: 0;
+    color: #999;
+    font-weight: bold;
+  }
+
+  .lightningtalk-talk {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    padding-top: .4em;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: bold;
+
+    @media (max-width: 600px) {
+      font-size: 1.6rem;
+      line-height: 1.3;
+    }
+  }
+
+  .lightningtalk-social {
+    padding-top: 1.4rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .lightningtalk-social-link {
+    --size: 1.6rem;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+    text-indent: -9999rem;
+    font-size: 0;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+    transition: transform .2s ease;
+  }
+
+  .lightningtalk-social-link:hover {
+    transform: scale(1.1);
+  }
+
+  .lightningtalk-social-link--twitter {
+    --size: 1.8rem;
+    background-image: url('/assets/social/twitter-color.png');
+  }
+
+  .lightningtalk-social-link--linkedin {
+    background-image: url('/assets/social/linkedin-color.png');
+  }
+</style>

@@ -1,0 +1,17 @@
+{
+  "name": "frontinsampa2023",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "astro": "^2.4.5"
+  },
+  "dependencies": {
+    "sass": "1.54.8"
+  }
+}

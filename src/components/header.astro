@@ -1,0 +1,237 @@
+<header>
+  <div class="header-edition">
+    12ª Edição – 2023<br />
+    Teatro Gazeta - 9h / 22h
+  </div>
+  <!-- <div class="header-sun"></div> -->
+  <div class="header-inner">
+    <div class="header-content">
+      <div class="header-logo">
+        Front in Sampa
+      </div>
+
+       <div class="header-button">
+            <a class="button button-inverse" href="https://www.eventbrite.com.br/e/frontin-sampa-2023-code-in-the-dark-tickets-574922567877" target="_blank">
+              Comprar Ingresso
+            </a>
+      </div>
+     
+    </div>
+
+    <div class="city"></div>
+  </div>
+</header=>
+
+<style lang="scss">
+  header {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    z-index: 2;
+  }
+
+  header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, var(--color-accent) 0%, rgba(255, 255, 255, 0) 100%);
+    opacity: .3;
+  }
+
+  .header-inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // max-width: var(--wrapper-small);
+    width: 100%;
+    // margin: 0 auto;
+    height: 100%;
+  }
+
+  .header-edition {
+    position: absolute;
+    display: inline-block;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    top: 7rem;
+    left: 50%;
+    margin-left: -46%;
+    // background-color: var(--color-secondary);
+    padding: .5rem 1.8rem;
+    font-weight: 600;
+
+    @media (max-width: 600px) {
+      top: 2rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  
+  .header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    max-width: var(--wrapper-small);
+    margin: 0 auto;
+    flex-direction: column;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  .header-logo {
+    --size: 60rem;
+    width: var(--size);
+    height: var(--size);
+    background: url('/assets/img/logo-fsp-fundo-preto.svg') center no-repeat;
+    background-size: 100% auto;
+    font-size: 0;
+    margin: 0 auto;
+
+    @media (max-width: 600px) {
+      --size: 30rem;
+    }
+  }
+
+  .header-info {
+    padding-left: 4rem;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      padding-left: 0;
+    }
+  }
+
+  .header-title {
+    margin-bottom: .4em;
+
+    @media (max-width: 600px) {
+      font-size: 2.6rem;
+      margin-top: 1rem;
+      max-width: 80%;
+      line-height: 1.4;
+    }
+  }
+
+  .header-button {
+    margin: -5rem auto 0 auto;
+
+    .button {
+      @media (max-width: 600px) {
+        font-size: 1.5rem;
+        padding: .6em 1em;
+        display: block;
+        text-align: center;
+      }
+    }
+
+  }
+
+  .header-subtitle {
+    display: inline-block;
+    // background-color: var(--color-accent-2);
+    font-size: 2.2rem;
+    padding: .5em 0;
+
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .header-date {
+    position: relative;
+    display: inline-block;
+    padding-right: 2.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .header-date:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 220%;
+    background-color: var(--color-secondary);
+    right: 0;
+    top: -60%;
+    transform: rotate(10deg);
+  }
+
+  .city {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url('/assets/img/sp.svg') center bottom no-repeat;
+    background-size: 200% auto;
+    opacity: 0.3;
+    filter: grayscale(1);
+  }
+
+  .bird {
+    position: absolute;
+    top: -3rem;
+    width: 5.4rem;
+    height: 1.6rem;
+    background: url('/assets/img/bird.svg') no-repeat center;
+    background-size: 100% auto;
+    animation: flying 3s ease-in-out infinite alternate;
+
+    @media (max-width: 600px) {
+      width: 3rem;
+      top: -1rem;
+    }
+  }
+
+  .bird.bird-2 {
+    animation-delay: 2s;
+    right: 0;
+    top: 0;
+
+    @media (max-width: 600px) {
+      top: 1rem;
+    }
+  }
+
+  @keyframes wave {
+    100% {
+      background-position: -1000px 0px;
+    }
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes flying {
+    0% {
+      transform: translateY(-.5rem) rotate(7deg);
+    }
+  
+    100% {
+      transform: translateY(.5rem) rotate(-6deg);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .header-inner {
+      padding: 0 3rem;
+    }
+  }
+</style>

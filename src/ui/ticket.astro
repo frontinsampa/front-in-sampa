@@ -1,0 +1,144 @@
+---
+const { title, date, valueMin, valueMax, isEnable, soldOut } = Astro.props;
+---
+
+<div class={`ticket-item ${!isEnable && 'ticket-item--off'} ${soldOut && 'ticket-item--soldout'}`}>
+  {soldOut && <div class="ticket-item-soldout-message">Esgotado</div>}
+  <h3 class="ticket-title">{title}</h3>
+  <p class="ticket-date">
+    <span>{date}</span>
+  </p>
+  <p class="ticket-disclaimer">ou até esgotar</p>
+  <span class="ticket-divisor"></span>
+  <p class="ticket-value">
+    R$ {valueMin} - R$ {valueMax}
+  </p>
+  <a class="button button-alt ticket-button" href="https://www.eventbrite.com.br/e/frontin-sampa-2023-code-in-the-dark-tickets-574922567877" target="_blank">Comprar</a>
+</div>
+
+<style lang="scss">
+  .ticket-item {
+    border: 2px solid var(--color-primary);
+    text-align: center;
+    padding: 2.4rem 0 3rem;
+    background-color: var(--color-secondary);
+  }
+
+  .ticket-item--off {
+    filter: grayscale(100%);
+    opacity: .1;
+    pointer-events: none;
+  }
+
+  .ticket-item--soldout {
+    position: relative;
+    overflow: hidden;
+    pointer-events: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, .8);
+      z-index: 2;
+    }
+
+    .button {
+      z-index: 1;
+    }
+  }
+
+  .ticket-item-soldout-message {
+    z-index: 4;
+    position: absolute;
+    width: 120%;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: 2rem;
+    top: 44%;
+    transform: rotate(-5deg);
+    font-family: var(--font-title);
+    padding: .4rem 0;
+    left: -10%;
+    font-weight: bold;
+  }
+
+  .ticket-title {
+    color: var(--color-primary);
+    font-size: 2.8rem;
+    margin-bottom: .4em;
+
+    @media (max-width: 600px) {
+      font-size: 2.6rem;
+    }
+  }
+
+  .ticket-date {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @media (max-width: 600px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .ticket-date span {
+    background-color: var(--color-accent-2);
+    padding: .3em .5em;
+  }
+
+  .ticket-disclaimer {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: .2rem 0 0 0;
+    color: #111;
+    font-family: var(--font-title);
+  }
+
+  .ticket-divisor {
+    display: block;
+    background-color: var(--color-primary);
+    height: 5rem;
+    width: 2px;
+    margin: 1rem auto 0;
+  }
+
+  .ticket-value {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    margin: .5rem 0 1rem;
+    padding: 0;
+    color: var(--color-primary);
+    font-weight: 900;
+
+    @media (max-width: 600px) {
+      font-size: 2.7rem;
+      margin-bottom: .6rem;
+    }
+  }
+
+  .ticket-button {
+    background-color: var(--color-accent-2);
+    padding-right: 2em;
+  }
+
+  .ticket-button:before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -.55rem;
+    right: 1.6rem;
+    border-top: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-primary);
+    transform: rotate(45deg);
+  }
+</style>
