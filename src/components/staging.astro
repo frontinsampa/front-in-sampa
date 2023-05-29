@@ -9,6 +9,7 @@ const lightningtalk = [
     talk: 'Descomplicando suas requisições assíncronas com React Query',
     twitter: 'bfgenaro',
     linkedin: 'https://www.linkedin.com/in/brunogenaro/',
+    time: '10:05',
   },
   {
     pic: 'nathally-souza.jpg',
@@ -17,6 +18,7 @@ const lightningtalk = [
     talk: 'Em Breve',
     twitter: 'nathsouzadev',
     linkedin: 'https://www.linkedin.com/in/nathsouza/',
+    time: '10:20',
   },
   {
     pic: 'afonso-pacifer.png',
@@ -25,6 +27,7 @@ const lightningtalk = [
     talk: 'Em Breve',
     twitter: 'afonsopacifer',
     linkedin: 'https://www.linkedin.com/in/afonsopacifer/',
+    time: '10:35',
   },
 ];
 
@@ -61,6 +64,11 @@ const specialClass = [0, 3, 4, 7];
         </div>
       ))}
     </div>
+
+    <p class="staging-disclaimer">
+      * Os horários e slots podem sofrer alterações sem aviso prévio até o dia do evento.
+    </p>
+
   </div>
 </section>
 
@@ -119,6 +127,20 @@ const specialClass = [0, 3, 4, 7];
 
      @media (max-width: 900px) {
       flex-basis: 50%;
+    }
+  }
+
+  .staging-disclaimer {
+    margin: 5rem 0 0 0;
+    padding: 0;
+    font-size: 1.3rem;
+    font-family: var(--font-title);
+    font-weight: bold;
+    color: var(--color-secondary);
+    text-align: center;
+
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
     }
   }
 
