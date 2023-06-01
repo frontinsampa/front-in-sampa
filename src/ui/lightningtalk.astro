@@ -1,5 +1,5 @@
 ---
-const { pic, name, bio, talk, twitter, linkedin, specialClass, time } = Astro.props;
+const { pic, name, bio, talk, twitter, instagram, linkedin, specialClass, time } = Astro.props;
 ---
 
 <div class={`lightningtalk-item lightningtalk-item--${specialClass}`}>
@@ -14,9 +14,10 @@ const { pic, name, bio, talk, twitter, linkedin, specialClass, time } = Astro.pr
           <p class="lightningtalk-bio">{bio}</p>
         </div>
         {talk && <p class="lightningtalk-talk">{talk}</p>}
-        {(twitter || linkedin) &&
+        {(twitter || linkedin || instagram) &&
           <div class="lightningtalk-social">
             {twitter && <a href={`https://twitter.com/${twitter}`} class="lightningtalk-social-link lightningtalk-social-link--twitter" target="_blank">Twitter</a>}
+            {instagram && <a href={`https://www.instagram.com/${instagram}`} class="lightningtalk-social-link lightningtalk-social-link--instagram" target="_blank">Instagram</a>}
             {linkedin && <a href={linkedin} class="lightningtalk-social-link lightningtalk-social-link--linkedin" target="_blank">Linkedin</a>}
           </div>}
       </div>
@@ -167,8 +168,13 @@ const { pic, name, bio, talk, twitter, linkedin, specialClass, time } = Astro.pr
     --size: 1.8rem;
     background-image: url('/assets/social/twitter-color.png');
   }
-
   .lightningtalk-social-link--linkedin {
     background-image: url('/assets/social/linkedin-color.png');
   }
+  .lightningtalk-social-link--instagram {
+    background-image: url('/assets/social/instagram-color.png');
+  }
+
+
+
 </style>

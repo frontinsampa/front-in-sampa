@@ -1,5 +1,5 @@
 ---
-const { pic, name, bio, talk, twitter, linkedin, specialClass } = Astro.props;
+const { pic, name, bio, talk, twitter, instagram, linkedin, specialClass } = Astro.props;
 ---
 
 <div class={`speaker-item speaker-item--${specialClass}`}>
@@ -14,9 +14,10 @@ const { pic, name, bio, talk, twitter, linkedin, specialClass } = Astro.props;
           <p class="speaker-bio">{bio}</p>
         </div>
         {talk && <p class="speaker-talk">{talk}</p>}
-        {(twitter || linkedin) &&
+        {(twitter || linkedin || instagram) &&
           <div class="speaker-social">
             {twitter && <a href={`https://twitter.com/${twitter}`} class="speaker-social-link speaker-social-link--twitter" target="_blank">Twitter</a>}
+            {instagram && <a href={`https://instagram.com/${instagram}`} class="speaker-social-link speaker-social-link--instagram" target="_blank">Instagram</a>}
             {linkedin && <a href={linkedin} class="speaker-social-link speaker-social-link--linkedin" target="_blank">Linkedin</a>}
           </div>}
       </div>
@@ -151,6 +152,9 @@ const { pic, name, bio, talk, twitter, linkedin, specialClass } = Astro.props;
   .speaker-social-link--twitter {
     --size: 1.8rem;
     background-image: url('/assets/social/twitter-color.png');
+  }
+  .speaker-social-link--instagram {
+    background-image: url('/assets/social/instagram-color.png');
   }
 
   .speaker-social-link--linkedin {

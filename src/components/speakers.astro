@@ -8,6 +8,7 @@ const speakers = [
     bio: 'Software engineer @ Klarna 🇸🇪',
     talk: 'Código da Escala Global: Desafios Tecnológicos para Milhões e Bilhões',
     twitter: '_StaticVoid',
+    instagram: 'lsantosdev',
     linkedin: 'https://www.linkedin.com/in/lsantosdev',
   },
   {
@@ -54,7 +55,7 @@ const specialClass = [0, 3, 4, 7];
 
   <div class="speakers-main">
     <div class="speakers-list">
-      {speakers.map(({ pic, name, bio, talk, twitter, linkedin }, index) => (
+      {speakers.map(({ pic, name, bio, talk, twitter, instagram, linkedin }, index) => (
         <div class="speakers-item">
           <Speaker
             pic={pic}
@@ -62,6 +63,7 @@ const specialClass = [0, 3, 4, 7];
             bio={bio}
             talk={talk}
             twitter={twitter}
+            instagram={instagram}
             linkedin={linkedin}
             specialClass={specialClass.includes(index) && 'alt'}
           />

@@ -3,12 +3,12 @@ import Lightningtalk from "../ui/lightningtalk.astro";
 
 const lightningtalk = [
   {
-    pic: 'bruno-genaro.jpeg',
-    name: 'Bruno Genaro',
-    bio: 'Software Engineer | CEO @ websolutionsfl',
-    talk: 'Descomplicando suas requisições assíncronas com React Query',
-    twitter: 'bfgenaro',
-    linkedin: 'https://www.linkedin.com/in/brunogenaro/',
+    pic: 'afonso-pacifer.png',
+    name: 'Afonso Pacifer',
+    bio: 'DevRel & Platform Front-End Specialist @ Neoway',
+    talk: 'Em Breve',
+    twitter: 'afonsopacifer',
+    linkedin: 'https://www.linkedin.com/in/afonsopacifer/',
     time: '10:05',
   },
   {
@@ -17,26 +17,9 @@ const lightningtalk = [
     bio: 'Engenheira de Software @ Nubank',
     talk: 'Em Breve',
     twitter: 'nathsouzadev',
+    instagram: 'nathsouzadev',
     linkedin: 'https://www.linkedin.com/in/nathsouza/',
     time: '10:20',
-  },
-  {
-    pic: 'afonso-pacifer.png',
-    name: 'Afonso Pacifer',
-    bio: 'DevRel & Platform Front-End Specialist @ Neoway',
-    talk: 'Em Breve',
-    twitter: 'afonsopacifer',
-    linkedin: 'https://www.linkedin.com/in/afonsopacifer/',
-    time: '10:35',
-  },
-  {
-    pic: 'proxy-go.jpg',
-    name: 'Proxy_go',
-    bio: 'Designer, escritora, ilustradora, streamer e droneira',
-    talk: 'Voando Juntas: A Experiência de Fazer Parte de um Time de Pilotas de Drone',
-    twitter: 'proxy_go',
-    linkedin: 'https://www.linkedin.com/in/proxygo/',
-    time: '10:50',
   },
   {
     pic: 'nick-gabe.jpeg',
@@ -44,9 +27,56 @@ const lightningtalk = [
     bio: 'Full Stack Developer @ Vinivia',
     talk: 'Em Breve',
     twitter: 'ImNickGabe',
+    time: '10:35',
+  },
+   {
+    pic: 'jureg.png',
+    name: 'Jureg',
+    bio: 'Desenvolvedor FullStack - VueJS | Node & Community Manager na Thasfin',
+    talk: 'Importância do networking em inicio de carreira',
+    twitter: 'juregdev',
+    instagram: 'juregdev',
+    linkedin: 'https://www.linkedin.com/in/juregdev/',
+    time: '10:50',
+  },
+  {
+    pic: 'fernanda-kipper.png',
+    name: 'Fernanda Kipper',
+    bio: 'Software Engineer @ Itaú',
+    talk: 'Criando uma Função Serverless na AWS em menos de 10 minutos',
+    instagram: 'kipper.dev',
+    linkedin: 'https://www.linkedin.com/in/fernanda-kipper/',
     time: '11:05',
   },
-  
+  {
+    pic: 'guilherme-pais.jpeg',
+    name: 'Guilherme Pais',
+    bio: 'Chapter Lead | Front End @ Paraná Banco',
+    talk: 'Guia de Sobrevivência a um Design System',
+    twitter: 'guilhermepais',
+    linkedin: 'https://www.linkedin.com/in/guilhermepais/',
+    time: '11:20',
+  },
+  {
+    pic: 'proxy-go.jpg',
+    name: 'Proxy_go',
+    bio: 'Designer, escritora, ilustradora, streamer e droneira',
+    talk: 'Voando Juntas: A Experiência de Fazer Parte de um Time de Pilotas de Drone',
+    twitter: 'proxy_go',
+    instagram: 'proxy_go',
+    linkedin: 'https://www.linkedin.com/in/proxygo/',
+    time: '11:35',
+  },
+  {
+    pic: 'bruno-genaro.jpeg',
+    name: 'Bruno Genaro',
+    bio: 'Software Engineer | CEO @ WebSolutionsFL',
+    talk: 'Descomplicando suas requisições assíncronas com React Query',
+    twitter: 'bfgenaro',
+    instagram: 'brunogenaro',
+    linkedin: 'https://www.linkedin.com/in/brunogenaro/',
+    time: '11:50',
+  },
 ];
 
 const specialClass = [0, 3, 4, 7];
@@ -67,7 +97,7 @@ const specialClass = [0, 3, 4, 7];
 
 
     <div class="staging-list">
-      {lightningtalk.map(({ pic, name, bio, talk, twitter, linkedin, time }, index) => (
+      {lightningtalk.map(({ pic, name, bio, talk, twitter, instagram, linkedin, time }, index) => (
         <div class="staging-item">
           <Lightningtalk
             pic={pic}
@@ -75,6 +105,7 @@ const specialClass = [0, 3, 4, 7];
             bio={bio}
             talk={talk}
             twitter={twitter}
+            instagram={instagram}
             linkedin={linkedin}
             time={time}
             specialClass={specialClass.includes(index) && 'alt'}
