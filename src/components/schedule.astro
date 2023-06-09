@@ -3,59 +3,69 @@ const schedule = [
   {
     time: '09:00',
     title: 'Abertura oficial',
-    disclaimer: 'Boas vindas e um pouco como será a dinâmica do dia' 
+    disclaimer: 'Boas vindas e um pouco como será a dinâmica do dia.'
   },
   {
     time: '09:15',
-    title: 'Primeira palestra',
+    title: 'Código da Escala Global: Desafios Tecnológicos para Milhões e Bilhões',
+    talk: 'LUCAS SANTOS - @_staticvoid',
   },
   {
     time: '10:00',
     title: 'Break - Networking',
+    disclaimer: 'Pausa rápida para esticar as pernas, ir ao banheiro, ver uma palestra no palco Staging, discutir idéias fazendo networking e visitar o stand dos patrocinadores e nossa lojinha ❤️',
   },
   {
     time: '10:15',
-    title: 'Segunda palestra',
+    title: 'Máquinas de Estado Finito para Interfaces Infinitamente Melhores',
+    talk: 'MARIA CLARA - @olarclara',
   },
   {
     time: '11:00',
     title: 'Break - Networking',
+    disclaimer: 'Pausa rápida para esticar as pernas, ir ao banheiro, ver uma palestra no palco Staging, discutir idéias fazendo networking e visitar o stand dos patrocinadores e nossa lojinha ❤️'
   },
   {
     time: '11:15',
-    title: 'Terceira palestra',
+    title: 'Arquitetura Frontend para Escalabilidade em Dias de Alta Demanda: Insights da NIke.com.br',
+    talk: 'EMILIO AIOLFI - @EmilioAiolfi',
   },
   {
     time: '12:00',
     title: 'Break - Networking',
+    disclaimer: 'Pausa rápida para esticar as pernas, ir ao banheiro, ver uma palestra no palco Staging, discutir idéias fazendo networking e visitar o stand dos patrocinadores e nossa lojinha ❤️'
   },
   {
     time: '12:15',
-    title: 'Quarta palestra',
+    title: 'O que é necessário saber para trabalhar com live streaming',
+    talk: 'LAÍS LIMA - @laislima_dev',
   },
   {
     time: '13:00',
     title: 'Intervalo para o almoço',
+    disclaimer: 'Nos arredores do Teatro Gazeta, você encontrará uma variedade incrível de restaurantes para todos os gostos! Desde os mais elegantes e sofisticados até os nossos queridos fast-foods. E sabe o que é ainda mais legal? Tem um shopping bem ao lado. São tantas opções que não faltará escolha. Aproveitem o tempo e lembrem-se de que voltamos às 14h15!'
   },
   {
     time: '14:15',
-    title: 'Quinta palestra',
+    title: 'Em Breve!',
   },
   {
     time: '15:00',
     title: 'Break - Networking',
+    disclaimer: 'Pausa rápida para esticar as pernas, ir ao banheiro, ver uma palestra no palco Staging, discutir idéias fazendo networking e visitar o stand dos patrocinadores e nossa lojinha ❤️'
   },
   {
     time: '15:15',
-    title: 'Sexta palestra',
+    title: 'Em Breve!',
   },
   {
     time: '16:00',
     title: 'Break - Networking',
+    disclaimer: 'Pausa rápida para esticar as pernas, ir ao banheiro, ver uma palestra no palco Staging, discutir idéias fazendo networking e visitar o stand dos patrocinadores e nossa lojinha ❤️'
   },
   {
     time: '16:15',
-    title: 'Sétima palestra',
+    title: 'Em Breve!',
   },
   {
     time: '17:00',
@@ -64,6 +74,7 @@ const schedule = [
   {
     time: '18:00',
     title: 'Code In The Dark Brasil',
+    talk: 'ARE YOU READY TO CODE IN THE DARK?',
   }
 
 ];
@@ -76,7 +87,7 @@ const schedule = [
   <div class="schedule-main">
     <ul class="schedule-list">
 
-      {schedule.map(({ time, title, disclaimer }) => (
+      {schedule.map(({ time, title, disclaimer, talk, description }) => (
         <li class="schedule-item">
           <div class="schedule-column-time">
             <span class="schedule-item-time">{time}</span>
@@ -84,6 +95,8 @@ const schedule = [
           <div class="schedule-column-content">
             <h3 class="schedule-item-title">{title}</h3>
             {disclaimer && <p class="schedule-item-disclaimer">{disclaimer}</p>}
+            {talk && <p class="schedule-item-talk">{talk}</p>}
+            {description && <p class="schedule-item-description">{description}</p>}
           </div>
         </li>
       ))}
@@ -124,6 +137,17 @@ const schedule = [
 
   .schedule-disclaimer {
     padding-top: 5rem;
+    color: #999;
+    text-align: center;
+
+    @media (max-width: 800px) {
+      text-align: left;
+      padding-left: 3rem;
+      padding-top: 2rem;
+    }
+  }
+
+  .schedule-description {
     color: #999;
     text-align: center;
 
@@ -212,8 +236,14 @@ const schedule = [
     font-size: 1.6rem;
     font-weight: 600;
     text-indent: 1px;
-    margin: -1rem 0 4rem 0;
+    margin: 0 0 2rem 0;
     line-height: 1.6;
+    box-shadow: 4px 5px var(--color-neon-green);
+    background: var(--color-accent);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    text-align: right;
+    padding: 5px 10px;
 
     @media (max-width: 600px) {
       font-size: 1.4rem;
@@ -221,6 +251,19 @@ const schedule = [
   }
 
   .schedule-item-disclaimer {
+    margin: -1rem 0 0;
+    padding: 0;
+    font-size: 1.3rem;
+    color: #666;
+    font-family: var(--font-title);
+    font-weight: bold;
+
+    @media (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .schedule-item-description {
     margin: -1rem 0 0;
     padding: 0;
     font-size: 1.3rem;
