@@ -25,7 +25,11 @@ const support = [
     company: 'Front-end Week',
     url: 'https://www.frontendweek.com.br/',
   },
-
+  {
+    logo: 'quebradev.jpg',
+    company: 'QUEBRADEV',
+    url: 'https://quebra.dev/',
+  },
 ];
 ---
 
@@ -56,7 +60,7 @@ const support = [
     
     <div class="support-list">
       {support.map(({ logo, company, url }) => (
-        <div class="sponsors-item">
+        <div class="support-item">
           <Sponsor
             logo={logo}
             company={company}
@@ -175,11 +179,11 @@ const support = [
   }
 
   .support-item {
-    flex-basis: 13%;
+    flex-basis: 25%;
     margin-bottom: 2rem;
 
     @media (max-width: 600px) {
-      flex-basis: 33%;
+      flex-basis: 50%;
     }
   }
 </style>
