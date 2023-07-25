@@ -58,7 +58,7 @@
 :root {
   --font-default: 'Roboto', monospace;
   --font-title: 'PlusJakartaSans', Arial, sans-serif;
-  
+
   /* ==================================================== */
   /*
     New palette
@@ -69,7 +69,7 @@
     --white: #FFFFFF;
     --black-transparent: #20202080;
     --white-transparent: #ffffff80;
-  
+
     Old palette
     --color-primary: #0e0e10;
     --color-secondary: #fff;
@@ -87,7 +87,7 @@
   --color-text: #202020;
   --color-border: #ffffff80;
   --color-neon-green: #2efc98;
-  
+
   /* ==================================================== */
 
   --wrapper: 1400px;
@@ -107,8 +107,8 @@
   color: var(--color-primary);
 }
 
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: border-box;
 }
@@ -215,7 +215,7 @@ a {
   background-image: url('/assets/social/whatsapp.png');
 } */
 
-p strong {
+p strong, b {
   font-weight: 900;
 }
 
