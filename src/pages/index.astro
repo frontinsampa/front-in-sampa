@@ -18,6 +18,7 @@ const permalink = Astro.site;
 
 <BaseLayout title={title} description={description} permalink={permalink}>
   <Header />
+  <main role="main">
   <Features />
   <Speakers />
   <Location />
@@ -25,5 +26,12 @@ const permalink = Astro.site;
   <Tickets />
   <Staging />
   <Sponsors />
+  </main>
   <Footer />
 </BaseLayout>
+
+<style lang="scss">
+main {
+  overflow: hidden;
+}
+</style>
