@@ -1,7 +1,7 @@
 <header>
   <div class="header-edition">
-    12ª Edição – 2023<br />
-    Teatro Gazeta - 9h / 22h
+    13ª Edição – 2024<br />
+    Teatro Gazeta - 9h / 19h
   </div>
   <!-- <div class="header-sun"></div> -->
   <div class="header-inner">
@@ -11,16 +11,17 @@
       </div>
 
        <div class="header-button">
-            <a class="button button-inverse" href="https://www.eventbrite.com.br/e/frontin-sampa-2023-code-in-the-dark-tickets-574922567877" target="_blank">
-              Comprar Ingresso
+             <a class="button button-inverse" href="https://forms.gle/yJABahRkRo64kL1AA" target="_blank">
+             CALL4PAPERS!
             </a>
       </div>
+
      
     </div>
 
     <div class="city"></div>
   </div>
-</header=>
+</header>
 
 <style lang="scss">
   header {
@@ -28,8 +29,10 @@
     height: 100%;
     overflow: hidden;
     color: var(--color-secondary);
-    background-color: var(--color-primary);
+    background: url('/assets/img/fundo-hero.png') center no-repeat;
+    background-size: cover;
     z-index: 2;
+    border-bottom: 5px solid #FF5055;
   }
 
   header:before {
@@ -41,7 +44,6 @@
     bottom: 50%;
     left: 0;
     z-index: -1;
-    background: linear-gradient(180deg, var(--color-accent) 0%, rgba(255, 255, 255, 0) 100%);
     opacity: .3;
   }
 
@@ -74,7 +76,6 @@
     }
   }
 
-  
   .header-content {
     position: relative;
     z-index: 1;
@@ -93,7 +94,7 @@
     --size: 60rem;
     width: var(--size);
     height: var(--size);
-    background: url('/assets/img/logo-fsp-fundo-preto.svg') center no-repeat;
+    background: url('/assets/img/logo-fsp-fundo.svg') center 40% no-repeat;
     background-size: 100% auto;
     font-size: 0;
     margin: 0 auto;
@@ -176,59 +177,13 @@
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: url('/assets/img/sp.svg') center bottom no-repeat;
+    //background: url('/assets/img/sp.svg') center bottom no-repeat;
     background-size: 200% auto;
     opacity: 0.3;
     filter: grayscale(1);
   }
 
-  .bird {
-    position: absolute;
-    top: -3rem;
-    width: 5.4rem;
-    height: 1.6rem;
-    background: url('/assets/img/bird.svg') no-repeat center;
-    background-size: 100% auto;
-    animation: flying 3s ease-in-out infinite alternate;
-
-    @media (max-width: 600px) {
-      width: 3rem;
-      top: -1rem;
-    }
-  }
-
-  .bird.bird-2 {
-    animation-delay: 2s;
-    right: 0;
-    top: 0;
-
-    @media (max-width: 600px) {
-      top: 1rem;
-    }
-  }
-
-  @keyframes wave {
-    100% {
-      background-position: -1000px 0px;
-    }
-  }
-
-  @keyframes spin {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes flying {
-    0% {
-      transform: translateY(-.5rem) rotate(7deg);
-    }
   
-    100% {
-      transform: translateY(.5rem) rotate(-6deg);
-    }
-  }
-
   @media (max-width: 1000px) {
     .header-inner {
       padding: 0 3rem;

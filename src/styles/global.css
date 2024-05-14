@@ -59,31 +59,13 @@
   --font-default: 'Roboto', monospace;
   --font-title: 'PlusJakartaSans', Arial, sans-serif;
 
-  /* ==================================================== */
-  /*
-    New palette
-    --red: #FF685C;
-    --light-red: #FFE8E6;
-    --gray: #404040;
-    --black: #202020;
-    --white: #FFFFFF;
-    --black-transparent: #20202080;
-    --white-transparent: #ffffff80;
 
-    Old palette
-    --color-primary: #0e0e10;
-    --color-secondary: #fff;
-    --color-accent: #93ffb7;
-    --color-accent-2: #e6ffef;
-    --color-text: #141414;
-    --color-border: #F9F9F9;
-  */
   /* ==================================================== */
-  --color-primary: #202020;
+  --color-primary: #0F1E44;
   --color-secondary: #FFFFFF;
-  --color-accent-old: #FF685C;
-  --color-accent: #fa4541;
-  --color-accent-2: #FFE8E6;
+  --color-accent-old: #FF5055;
+  --color-accent: #FF5055;
+  --color-accent-2: #b9e3ff;
   --color-text: #202020;
   --color-border: #ffffff80;
   --color-neon-green: #2efc98;
@@ -183,38 +165,7 @@ a {
 .link-social {
   position: relative;
   display: inline-block;
-  /* padding-left: 2.4rem; */
 }
-
-/* .link-social:before {
-  --size: 1.4rem;
-  content: '';
-  position: absolute;
-  display: block;
-  top: .5em;
-  left: .2em;
-  width: var(--size);
-  height: var(--size);
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.link-social--twitter:before {
-  background-image: url('/assets/social/twitter.png');
-}
-
-.link-social--instagram:before {
-  background-image: url('/assets/social/instagram.png');
-}
-
-.link-social--github:before {
-  background-image: url('/assets/social/github.png');
-}
-
-.link-social--whatsapp:before {
-  background-image: url('/assets/social/whatsapp.png');
-} */
 
 p strong, b {
   font-weight: 900;
@@ -227,6 +178,7 @@ img {
 .button {
   position: relative;
   display: inline-block;
+  border-radius: 30px;
   text-decoration: none;
   font-size: 1.8rem;
   color: var(--color-primary);
