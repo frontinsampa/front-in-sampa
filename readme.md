@@ -1,3 +1,3 @@
-# Frontinsampa 2023
+# Frontinsampa 2024
 
 > https://evento.frontinsampa.com.br
