@@ -92,25 +92,12 @@ const support = [
   <div class="sponsors-main">
 
     <h2 class="sponsors-title">
-      Patrocínio
+      Quer patrocinar o Front In Sampa 2024?
     </h2>
 
-    <div class="sponsors-list">
-      {sponsors.map(({
-        logo,
-        company,
-        url,
-      }) => (
-        <div class="sponsors-item">
-          <Sponsor
-            logo={logo}
-            company={company}
-            url={url}
-            kind="sponsor"
-          />
-        </div>
-      ))}
-    </div>
+
+ 
+  
 
     <div class="sponsors-content--footer">
       <p>
@@ -123,31 +110,11 @@ const support = [
         href="http://patrocine.frontinsampa.com.br"
         target="_blank"
       >
-        ENTRE EM CONTATO
+        Entre em Contato
       </a>
     </div>
+</div>
 
-    <h2 class="sponsors-title">
-      Apoio
-    </h2>
-
-    <div class="sponsors-content">
-      <p>Eventos e comunidades parceiros da <strong>FRONTIN</strong></p>
-    </div>
-
-    <div class="support-list">
-      {support.map(({ logo, company, url }) => (
-        <div class="support-item">
-          <Sponsor
-            logo={logo}
-            company={company}
-            url={url}
-            kind="support"
-          />
-        </div>
-      ))}
-    </div>
-  </div>
 </section>
 
 <style lang="scss">
