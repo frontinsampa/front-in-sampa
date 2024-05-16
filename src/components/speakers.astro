@@ -3,65 +3,13 @@ import Speaker from "../ui/speaker.astro";
 
 const speakers = [
   {
-    pic: 'lucas-santos.png',
-    name: 'Lucas Santos',
-    bio: 'Software engineer @ Klarna 🇸🇪',
-    talk: 'Código da Escala Global: Desafios Tecnológicos para Milhões e Bilhões',
-    twitter: '_StaticVoid',
-    instagram: 'lsantosdev',
-    linkedin: 'https://www.linkedin.com/in/lsantosdev',
-  },
-  {
-    pic: 'maria-clara.jpeg',
-    name: 'Maria Clara',
-    bio: 'Software Engineer @ Brex',
-    talk: 'Máquinas de Estado Finito para Interfaces Infinitamente Melhores',
-    twitter: 'olarclara',
-    linkedin: 'https://www.linkedin.com/in/mariaclarasantana',
-  },
-  {
-    pic: 'lais-lima.jpg',
-    name: 'Laís Lima',
-    bio: 'Software Engineer @ Globo | Co Organizer @ Golang SP',
-    talk: 'O que é necessário saber para trabalhar com live streaming',
-    twitter: 'laislima_dev',
-    instagram: 'laislima_dev',
-    linkedin: 'https://www.linkedin.com/in/laislimadev/',
-  },
-  {
-    pic: 'emilio-aiolfi.jpg',
-    name: 'Emilio Aiolfi',
-    bio: 'Frontend Software Engineer @ Grupo SBF Nike.com.br | Host do DNE e apaixonado por sneakers',
-    talk: 'Arquitetura Frontend para Escalabilidade em Dias de Alta Demanda: Insights da NIke.com.br',
-    twitter: 'emilioAiolfi',
-    instagram: 'emilioaiolfi',
-    linkedin: 'https://www.linkedin.com/in/emilioaiolfi/',
-  },
-  {
-    pic: 'aline-bezzoco.jpg',
-    name: 'Aline Bezzoco',
-    bio: 'Desenvolvedora Front-End @ Pismo',
-    talk: 'Animações e transições com o Vue 3',
-    twitter: 'bezzocoaline',
-    linkedin: 'https://www.linkedin.com/in/bezzocoaline/',
-  },
-  {
-    pic: 'gui-souza.jpg',
-    name: 'Gui Souza',
-    bio: 'Founder & Software Engineer @ Data² | Creator of Infleux',
-    talk: 'Data vs Code',
-    twitter: '_gui_souza',
-    instagram: 'gui_souza',
-    linkedin: 'https://www.linkedin.com/in/guilhermedesouzacoder/',
-  },
-  {
-    pic: 'deivid-marques.jpg',
-    name: 'Deivid Marques',
-    bio: 'Frontend @ C6 Bank | co-criador do Frontinsampa | Evangelizador de acessibilidade',
-    talk: 'Frontend além do código',
-    twitter: 'deividmarques',
-    instagram: 'deividmarques',
-    linkedin: 'https://www.linkedin.com/in/deividmarques/',
+    pic: 'daniel-afonso.png',
+    name: 'Daniel Afonso',
+    bio: 'Developer Advocate @ OLX',
+    talk: 'Em Breve',
+    twitter: 'danieljcafonso',
+    instagram: 'danieljcafonso',
+    linkedin: 'https://www.linkedin.com/in/danieljcafonso/',
   }
 ];
 
@@ -70,7 +18,7 @@ const specialClass = [0, 3, 4, 7];
 
 <section class="speakers">
 
- <h2 class="speakers-title">Production.Frontinsampa</h2>
+ <h2 class="speakers-title">Palco.Production</h2>
 
   <div class="speakers-main">
     <div class="speakers-list">
@@ -119,9 +67,11 @@ const specialClass = [0, 3, 4, 7];
   .speakers-title {
     font-size: 4rem;
     text-align: center;
-    background-color: var(--color-neon-green);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
     padding: 1rem 0;
     margin-bottom: 6rem;
+    text-transform: uppercase;
 
 
     @media (max-width: 600px) {
@@ -144,28 +94,6 @@ const specialClass = [0, 3, 4, 7];
   .speakers-item {
     flex-basis: 48%;
     margin-bottom: 3rem;
-    transform: rotate(354deg);
-
-    &:nth-child(2) {
-     transform: rotate(4deg);
-   }
-   &:nth-child(3) {
-     transform: rotate(344deg);
-   }
-   &:nth-child(4) {
-     transform: rotate(10deg);
-   }
-   &:nth-child(5) {
-     transform: rotate(0deg);
-   }
-   &:nth-child(6) {
-     transform: rotate(342deg);
-   }
-   &:nth-child(6) {
-     transform: rotate(351deg);
-   }
-
-
   }
 
 

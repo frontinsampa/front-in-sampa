@@ -204,39 +204,22 @@ const specialClass = [0, 3, 4, 7];
 
 
 <section class="staging">
-  <h2 class="staging-title">Staging.Frontinsampa</h2>
+  <h2 class="staging-title">Palco.Staging</h2>
 
   <div class="staging-main">
     <p class="staging-content">
-    Quando estamos prestes a iniciar um novo projeto, a primeira parada é no Staging. É lá que toda a mágica acontece! É o momento de finalizar os componentes que já estão prontos (só falta testar, hehe), criar novos elementos e incluir aqueles que são indispensáveis em qualquer projeto. Este é um ambiente acolhedor, onde todos, palestrantes e participantes do evento, podem se sentir completamente à vontade. Aqui, queremos que se sintam em casa, aproveitem ao máximo e compartilhem suas ideias e conhecimentos.</p> 
+    No ano passado (2023), o Palco Staging foi um sucesso e estamos empolgados para repetir a experiência.
+    </p> 
     
-    <p class="staging-content">Então, <strong>bem-vindos ao palco Staging.Frontinsampa</strong>, o lugar onde a criatividade e a inovação se encontram para transformar ideias em realidade! Vamos nessa, é hora de colocar a mão na massa e fazer desse evento um verdadeiro sucesso!</p>
-
-    <p class="staging-content">Alguns dos nomes já confirmados:</p>
-
-
-
-    <div class="staging-list">
-      {lightningtalk.map(({ pic, name, bio, talk, twitter, instagram, linkedin, time }, index) => (
-        <div class="staging-item">
-          <Lightningtalk
-            pic={pic}
-            name={name}
-            bio={bio}
-            talk={talk}
-            twitter={twitter}
-            instagram={instagram}
-            linkedin={linkedin}
-            time={time}
-            specialClass={specialClass.includes(index) && 'alt'}
-          />
-        </div>
-      ))}
-    </div>
-
-    <p class="staging-disclaimer">
-      * Os horários e slots podem sofrer alterações sem aviso prévio até o dia do evento.
+    <p class="staging-content">
+    Para quem não está familiarizado, o nome Staging é dado porque, ao iniciar um novo projeto, é lá que tudo começa. É onde a magia acontece! Nesse ambiente acolhedor, finalizamos os componentes existentes, criamos novos elementos e incluímos tudo o que é essencial para o sucesso do projeto. Aqui, tanto os palestrantes quanto os participantes podem se sentir em casa, compartilhando ideias e conhecimentos.
     </p>
+
+    <p class="staging-content">
+    Então, sejam bem-vindos ao Palco Staging.Frontinsampa, onde a criatividade e a inovação se unem para transformar ideias em realidade! É hora de colocar a mão na massa e fazer deste evento mais um sucesso!
+    </p>
+    
+
 
   </div>
 </section>
@@ -246,6 +229,7 @@ const specialClass = [0, 3, 4, 7];
     position: relative;
     background-color: var(--color-primary);
     padding: 13rem 0 10rem;
+    border-bottom: 2px solid var(--color-accent);
 
     @media (max-width: 600px) {
       padding: 9rem 0 2rem;
@@ -267,6 +251,7 @@ const specialClass = [0, 3, 4, 7];
     color: var(--color-secondary);
     background: var(--color-accent);
     padding: 1rem 0;
+    text-transform: uppercase;
 
     @media (max-width: 600px) {
       font-size: 3rem;
