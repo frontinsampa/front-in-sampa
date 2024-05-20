@@ -307,7 +307,6 @@ const socials = [
   const showCOC = document.getElementById('show-coc');
   const closeCOC = document.getElementById('close-coc');
   const COC = document.getElementById('coc');
-  const editions = document.getElementById('editions');
 
   if (showCOC) {
     showCOC.addEventListener('click', e => {
@@ -323,13 +322,5 @@ const socials = [
     setTimeout(() => {
       COC.classList.remove('show', 'hide')
     }, 1000);
-  });
-
-  editions.addEventListener('change', e => {
-    const editionURL = e.target.value;
-
-    if (editionURL !== 'none') {
-      window.open(editionURL, '_blank');
-    }
   });
 </script>
