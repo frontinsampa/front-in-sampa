@@ -4,35 +4,35 @@ import Ticket from "../ui/ticket.astro";
 const tickets = [
   {
     title: 'Early Bird',
-    date: '',
-    valueMin: '108',
-    valueMax: '278',
+    date: 'Até 31/Maio',
+    valueMin: '149,50',
+    valueMax: '379',
     isEnable: true,
-    soldOut: true,
+    soldOut: false,
   },
   {
     title: '1º Lote',
-    date: '',
-    valueMin: '84',
-    valueMax: '168',
-    isEnable: true,
-    soldOut: true,
+    date: 'em breve!',
+    valueMin: '199,50',
+    valueMax: '399',
+    isEnable: false,
+    soldOut: false,
   },
   {
     title: '2º Lote',
-    date: 'até 01/Jul',
-    valueMin: '126',
-    valueMax: '252',
-    isEnable: true,
-    soldOut: true,
+    date: 'em breve!',
+    valueMin: '249,50',
+    valueMax: '499',
+    isEnable: false,
+    soldOut: false,
   },
   {
     title: '3º Lote',
     date: 'última chance!',
-    valueMin: '189',
-    valueMax: '378',
-    isEnable: true,
-    soldOut: true,
+    valueMin: '349,50',
+    valueMax: '699',
+    isEnable: false,
+    soldOut: false,
   }
 ];
 ---
@@ -70,13 +70,13 @@ const tickets = [
     }
   }
 
- 
   .tickets-title {
-    color: var(--color-primary);
+    color: var(--color-secondary);
     font-size: 4rem;
     text-align: center;
-    background-color: var(--color-neon-green);
+    background-color: var(--color-primary);
     padding: 1rem 0;
+    text-transform: uppercase;
 
     @media (max-width: 600px) {
       font-size: 3rem;
