@@ -21,6 +21,26 @@ const specialClass = [0, 3, 4, 7];
  <h2 class="speakers-title">Palco.Production</h2>
 
   <div class="speakers-main">
+
+
+    <div class="speakers-content">
+
+      <p>
+      Aqui, no Palco Production, todas as palestras são cuidadosamente selecionadas para oferecer conteúdo inédito e exclusivo para os participantes do evento. Você pode ter certeza de que <strong>cada palestra será uma estreia, apresentada pela primeira vez em nosso palco</strong>. Estamos empenhados em trazer as últimas tendências e insights do mundo da tecnologia diretamente para você.
+      </p> 
+      
+      <p>
+      Com <strong>capacidade para mais de 700 pessoas</strong>, o Palco Production oferece poltronas super confortáveis e acessibilidade, garantindo uma experiência excepcional para todos os participantes.
+      </p>
+
+      <p>
+      Acompanhe abaixo os <strong>palestrantes já confirmados</strong>, que prometem trazer conhecimento e inspiração para o Front In Sampa.
+      </p>
+    </div>
+    
+
+
+
     <div class="speakers-list">
       {speakers.map(({ pic, name, bio, talk, twitter, instagram, linkedin }, index) => (
         <div class="speakers-item">
@@ -57,6 +77,7 @@ const specialClass = [0, 3, 4, 7];
     max-width: var(--wrapper-medium);
     width: 100%;
     margin: 0 auto;
+    padding: 1rem 3rem 4rem 3rem;
 
 
      @media (max-width: 600px) {
@@ -79,6 +100,16 @@ const specialClass = [0, 3, 4, 7];
     }
   }
 
+  .speakers-content p{
+    color: var(--color-secondary);
+  }
+
+  .speakers-content p strong {
+    color: var(--color-primary);
+    background: var(--color-accent-2);
+    padding: 1rem 0.5rem;
+  }
+
   .speakers-list {
     padding-top: 5rem;
     display: flex;
@@ -89,7 +120,6 @@ const specialClass = [0, 3, 4, 7];
       display: block;
     }
   }
-
 
   .speakers-item {
     flex-basis: 48%;
