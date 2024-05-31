@@ -3,14 +3,24 @@ import Speaker from "../ui/speaker.astro";
 
 const speakers = [
   {
+    pic: 'camilo-micheletto.jpg',
+    name: 'Camilo Micheletto',
+    bio: 'Front-end sênior na OLX, escreve e palestra sobre CSS e performance web e também é consultor sobre design systems.',
+    talk: 'Os 3 pilares da arquitetura CSS',
+    twitter: 'lixeletto',
+    instagram: 'camilomicheletto',
+    linkedin: 'https://www.linkedin.com/in/camilo-micheletto/',
+  },
+  {
     pic: 'daniel-afonso.png',
     name: 'Daniel Afonso',
-    bio: 'Developer Advocate @ OLX',
+    bio: 'Developer Advocate na OLX, membro da equipe de DX do SolidJS, instrutor no Egghead.io e autor do livro State Management with React Query.',
     talk: 'Em Breve',
     twitter: 'danieljcafonso',
     instagram: 'danieljcafonso',
     linkedin: 'https://www.linkedin.com/in/danieljcafonso/',
   }
+
 ];
 
 const specialClass = [0, 3, 4, 7];
@@ -116,7 +126,7 @@ const specialClass = [0, 3, 4, 7];
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       display: block;
     }
   }
@@ -125,11 +135,5 @@ const specialClass = [0, 3, 4, 7];
     flex-basis: 48%;
     margin-bottom: 3rem;
   }
-
-
-
-
-
-
 
 </style>
