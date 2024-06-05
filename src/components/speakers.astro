@@ -10,6 +10,7 @@ const speakers = [
     twitter: 'lixeletto',
     instagram: 'camilomicheletto',
     linkedin: 'https://www.linkedin.com/in/camilo-micheletto/',
+    github: 'https://github.com/allyhere',
   },
   {
     pic: 'daniel-afonso.png',
@@ -19,6 +20,18 @@ const speakers = [
     twitter: 'danieljcafonso',
     instagram: 'danieljcafonso',
     linkedin: 'https://www.linkedin.com/in/danieljcafonso/',
+    github: 'https://github.com/danieljcafonso',
+  },
+   {
+    pic: 'kipperdev.png',
+    name: 'Fernanda Kipper',
+    bio: 'Engenheira de Software no Itaú e Microsoft MVP, apaixonada pelo desenvolvimento Web desde os 18 anos. Atualmente  Desenvolvedora Fullstack que adora compartilhar seu conhecimento através de videos e lives no YouTube e Instagram.',
+    talk: 'Em Breve',
+    twitter: 'kipperdev',
+    instagram: 'kipper.dev',
+    linkedin: 'https://www.linkedin.com/in/fernanda-kipper/',
+    github: 'https://github.com/Fernanda-Kipper',
+    youtube: 'https://www.youtube.com/@kipperdev',
   }
 
 ];
@@ -52,7 +65,7 @@ const specialClass = [0, 3, 4, 7];
 
 
     <div class="speakers-list">
-      {speakers.map(({ pic, name, bio, talk, twitter, instagram, linkedin }, index) => (
+      {speakers.map(({ pic, name, bio, talk, twitter, instagram, linkedin, github, youtube }, index) => (
         <div class="speakers-item">
           <Speaker
             pic={pic}
@@ -62,6 +75,8 @@ const specialClass = [0, 3, 4, 7];
             twitter={twitter}
             instagram={instagram}
             linkedin={linkedin}
+            github={github}
+            youtube={youtube}
             specialClass={specialClass.includes(index) && 'alt'}
           />
         </div>

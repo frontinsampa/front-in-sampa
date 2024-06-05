@@ -1,5 +1,5 @@
 ---
-const { pic, name, bio, talk, twitter, instagram, linkedin, specialClass, time } = Astro.props;
+const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, specialClass, time } = Astro.props;
 ---
 
 <div class={`lightningtalk-item lightningtalk-item--${specialClass}`}>
@@ -14,11 +14,13 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, specialClass, time }
           <p class="lightningtalk-bio">{bio}</p>
         </div>
         {talk && <p class="lightningtalk-talk">{talk}</p>}
-        {(twitter || linkedin || instagram) &&
+        {(twitter || linkedin || instagram || github || youtube) &&
           <div class="lightningtalk-social">
             {twitter && <a href={`https://twitter.com/${twitter}`} class="lightningtalk-social-link lightningtalk-social-link--twitter" target="_blank">Twitter</a>}
             {instagram && <a href={`https://www.instagram.com/${instagram}`} class="lightningtalk-social-link lightningtalk-social-link--instagram" target="_blank">Instagram</a>}
             {linkedin && <a href={linkedin} class="lightningtalk-social-link lightningtalk-social-link--linkedin" target="_blank">Linkedin</a>}
+            {github && <a href={github} class="lightningtalk-social-link lightningtalk-social-link--github" target="_blank">Github</a>}
+            {youtube && <a href={youtube} class="lightningtalk-social-link lightningtalk-social-link--youtube" target="_blank">Youtube</a>}
           </div>}
       </div>
     </div>
@@ -175,6 +177,12 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, specialClass, time }
   }
   .lightningtalk-social-link--instagram {
     background-image: url('/assets/social/instagram-color.png');
+  }
+  .lightningtalk-social-link--github {
+    background-image: url('/assets/social/github-color.png');
+  }
+  .lightningtalk-social-link--youtube {
+    background-image: url('/assets/social/youtube-color.png');
   }
 
 
