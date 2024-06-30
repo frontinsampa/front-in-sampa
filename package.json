@@ -12,6 +12,7 @@
     "astro": "^2.4.5"
   },
   "dependencies": {
+    "@astrojs/partytown": "^2.1.1",
     "sass": "1.54.8"
   }
 }
