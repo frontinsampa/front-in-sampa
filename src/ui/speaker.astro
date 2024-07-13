@@ -16,7 +16,7 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, spe
         {talk && <p class="speaker-talk">{talk}</p>}
         {(twitter || linkedin || instagram) &&
           <div class="speaker-social">
-            {twitter && <a href={`https://twitter.com/${twitter}`} class="speaker-social-link speaker-social-link--twitter" target="_blank">Twitter</a>}
+            {twitter && <a href={`https://x.com/${twitter}`} class="speaker-social-link speaker-social-link--twitter" target="_blank">Twitter</a>}
             {instagram && <a href={`https://instagram.com/${instagram}`} class="speaker-social-link speaker-social-link--instagram" target="_blank">Instagram</a>}
             {linkedin && <a href={linkedin} class="speaker-social-link speaker-social-link--linkedin" target="_blank">Linkedin</a>}
             {github && <a href={github} class="speaker-social-link speaker-social-link--github" target="_blank">Github</a>}
@@ -76,7 +76,7 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, spe
 
   .speaker-photo img {
     max-width: 100%;
-    border-radius: 50%;
+    border-radius: 20px;
   }
 
   .speaker-info {
@@ -154,7 +154,7 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, spe
 
   .speaker-social-link--twitter {
     --size: 1.8rem;
-    background-image: url('/assets/social/twitter-color.png');
+    background-image: url('/assets/social/x-color.png');
   }
   .speaker-social-link--instagram {
     background-image: url('/assets/social/instagram-color.png');

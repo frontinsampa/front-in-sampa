@@ -16,7 +16,7 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, spe
         {talk && <p class="lightningtalk-talk">{talk}</p>}
         {(twitter || linkedin || instagram || github || youtube) &&
           <div class="lightningtalk-social">
-            {twitter && <a href={`https://twitter.com/${twitter}`} class="lightningtalk-social-link lightningtalk-social-link--twitter" target="_blank">Twitter</a>}
+            {twitter && <a href={`https://x.com/${twitter}`} class="lightningtalk-social-link lightningtalk-social-link--twitter" target="_blank">Twitter</a>}
             {instagram && <a href={`https://www.instagram.com/${instagram}`} class="lightningtalk-social-link lightningtalk-social-link--instagram" target="_blank">Instagram</a>}
             {linkedin && <a href={linkedin} class="lightningtalk-social-link lightningtalk-social-link--linkedin" target="_blank">Linkedin</a>}
             {github && <a href={github} class="lightningtalk-social-link lightningtalk-social-link--github" target="_blank">Github</a>}
@@ -81,7 +81,6 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, spe
     border: 2px solid var(--color-primary);
     background-color: var(--color-secondary);
     box-shadow: 6px 6px var(--color-neon-green);
-
   }
 
 
@@ -95,6 +94,7 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, spe
 
   .lightningtalk-photo img {
     max-width: 100%;
+    border-radius: 10px;
   }
 
   .lightningtalk-info {
@@ -112,6 +112,7 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, spe
     margin-bottom: .2em;
     background-color: var(--color-neon-green);
     margin-left: -.5rem;
+    border-radius: 8px;
 
     @media (max-width: 600px) {
       font-size: 2.2rem;
@@ -170,7 +171,7 @@ const { pic, name, bio, talk, twitter, instagram, linkedin, github, youtube, spe
 
   .lightningtalk-social-link--twitter {
     --size: 1.8rem;
-    background-image: url('/assets/social/twitter-color.png');
+    background-image: url('/assets/social/x-color.png');
   }
   .lightningtalk-social-link--linkedin {
     background-image: url('/assets/social/linkedin-color.png');
