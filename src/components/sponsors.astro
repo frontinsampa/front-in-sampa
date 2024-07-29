@@ -26,14 +26,19 @@ const sponsors = [
 
 const support = [
   {
-    logo: '/partners/partner-code-in-the-dark.png',
-    company: 'Code In The Dark Brasil',
-    url: 'http://www.codeinthedark.com.br',
+    logo: '/speakers/tech-in-rio.webp',
+    company: 'Tech In Rio',
+    url: 'https://beacons.ai/techinrio',
   },
   {
-    logo: '/partners/partner-frontin-floripa.png',
-    company: 'Front In Floripa',
-    url: 'https://frontin.floripa.br/',
+    logo: '/partners/jssp.png',
+    company: 'Javascript SP Meetup',
+    url: 'https://www.meetup.com/Javascript-SP/',
+  },
+  {
+    logo: '/partners/angularsp.png',
+    company: 'Angular SP Meetup',
+    url: 'https://www.meetup.com/pt-BR/AngularJS-Sao-Paulo/',
   },
   {
     logo: '/partners/partner-frontendweek.jpg',
@@ -41,63 +46,41 @@ const support = [
     url: 'https://www.frontendweek.com.br/',
   },
   {
-    logo: '/partners/partner-roadsec.png',
-    company: 'Roadsec',
-    url: 'https://roadsec.com.br/',
-  },
-  {
-    logo: '/partners/partner-quebradev.png',
-    company: 'QuebraDev',
-    url: 'https://quebra.dev/',
-  },
-  {
-    logo: '/partners/partner-todas-as-letras.png',
-    company: 'Todas as Letras',
-    url: 'https://todasasletras.org/',
-  },
-  {
-    logo: '/partners/partner-trampar-de-casa.svg',
-    company: 'TramparDeCasa',
-    url: 'https://trampardecasa.com.br/',
-  },
-  {
-    logo: '/partners/partner-vi-uma-vaga.png',
-    company: 'ViUmaVaga',
-    url: 'https://viumavaga.tech/',
-  },
-  {
-    logo: '/partners/partner-devs-cansados.png',
-    company: 'Devs Cansados',
-    url: 'https://www.devscansados.com.br/',
-  },
-  {
     logo: '/partners/partner-devsoutinho.svg',
     company: 'DevSoutinho',
     url: 'https://mariosouto.com/',
   },
   {
-    logo: '/partners/partner-he4rtdevs.svg',
-    company: 'He4rt Devs',
-    url: 'https://heartdevs.com/',
-  },
-  {
-    logo: '/partners/partner-afroya.png',
-    company: 'Afroya',
-    url: 'https://afroya.tech/',
+    logo: '/partners/partner-code-in-the-dark.png',
+    company: 'Code In The Dark Brasil',
+    url: 'https://www.instagram.com/codeinthedarkbrasil/',
   },
 ];
 ---
 
+
 <section class="sponsors">
   <div class="sponsors-main">
-
     <h2 class="sponsors-title">
-      Quer patrocinar o Front In Sampa 2024?
+      Quer Patrocinar o Front In Sampa 2024?
     </h2>
-
-
  
-  
+    <!-- <div class="sponsors-list">
+      {sponsors.map(({
+        logo,
+        company,
+        url,
+      }) => (
+        <div class="sponsors-item">
+          <Sponsor
+            logo={logo}
+            company={company}
+            url={url}
+            kind="sponsor"
+          />
+        </div>
+      ))}
+    </div> -->
 
     <div class="sponsors-content--footer">
       <p>
@@ -110,12 +93,36 @@ const support = [
         href="http://patrocine.frontinsampa.com.br"
         target="_blank"
       >
-        Entre em Contato
+        ENTRE EM CONTATO
       </a>
     </div>
-</div>
-
+    <h2 class="sponsors-title">
+      Apoio
+    </h2>
+    <div class="sponsors-content">
+      <p>Eventos e comunidades parceiros da <strong>FRONTIN</strong></p>
+    </div>
+    
+    <div class="support-list">
+      {support.map(({ logo, company, url }) => (
+        <div class="support-item">
+          <Sponsor
+            logo={logo}
+            company={company}
+            url={url}
+            kind="support"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
 </section>
+
+
+
+
+
+
 
 <style lang="scss">
   .sponsors {
